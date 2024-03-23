@@ -1,5 +1,6 @@
 import React from 'react';
-export default class Username extends React.Component {
+// import { createRoot } from 'react-dom/client';
+export default class ChangeUsername extends React.Component {
     state = { value: "" };
   
     changeValue(value) {
@@ -29,8 +30,8 @@ export default class Username extends React.Component {
 //     );
 //   }
   
-//   document.body.innerHTML = "<div id='root'></div>";
-//   const root = ReactDOM.createRoot(document.getElementById("root"));
+//   document.body.innerHTML = "<div id='root5'></div>";
+//   const root = createRoot(document.getElementById("root"));
 //   root.render(<App />);
   
 //   setTimeout(() => {
@@ -38,6 +39,6 @@ export default class Username extends React.Component {
 //     document.querySelector("button").click();
   
 //     setTimeout(() => {
-//       console.log(document.getElementById("root").innerHTML);
+//       console.log(document.getElementById("root5").innerHTML);
 //     }, 300);
 //   }, 300);

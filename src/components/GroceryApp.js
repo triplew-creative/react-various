@@ -1,5 +1,4 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
 
 const Product = props => {
     const plus = () => {
@@ -19,7 +18,7 @@ const Product = props => {
     );
   };
   
-  const GroceryApp = (props) => {
+  export default function GroceryApp (props) {
     const [products, setProducts] = React.useState(props.products);
     
     const onVote = (dir, index) => {
@@ -41,17 +40,22 @@ const Product = props => {
     );
   }
   
-  document.body.innerHTML = "<div id='root'></div>";
-  const root = createRoot(document.getElementById('root'));
-  root.render(<GroceryApp
-    products={[
-      { name: "Oranges", votes: 0 },
-      { name: "Bananas", votes: 0 }
-    ]}
-  />, document.getElementById('root'));
+//   document.body.innerHTML = "<div id='root'></div>";
+//   const root = createRoot(document.getElementById('root'));
+//   root.render(<GroceryApp
+//     products={[
+//       { name: "Oranges", votes: 0 },
+//       { name: "Bananas", votes: 0 }
+//     ]}
+//   />, document.getElementById('root'));
   
-  let plusButton = document.querySelector("ul > li > button");
-  if(plusButton) {
-    plusButton.click();
-  }
+// setTimeout(() => {
+//     let plusButton = document.querySelector("ul > li > button");
+//     if(plusButton) {
+//       plusButton.click();
+//     }
+//     // setTimeout(() => {
+//     //   console.log(document.getElementById('root').outerHTML);
+//     // });
+//   });
   

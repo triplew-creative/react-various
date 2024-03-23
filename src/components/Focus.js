@@ -1,5 +1,6 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+// import { createRoot } from 'react-dom/client';
+
 class Input extends React.PureComponent {
     render() {
       let {forwardedRef, ...otherProps} = this.props; 
@@ -11,7 +12,7 @@ class Input extends React.PureComponent {
     return <Input {...props} forwardedRef={ref} />
   });
   
-  class FocusableInput extends React.Component {
+export default class FocusableInput  extends React.Component {
     
     ref = React.createRef()
   
@@ -24,7 +25,7 @@ class Input extends React.PureComponent {
     // If focused prop is true, the input should receive the focus.
     // Implement your solution below:
     componentDidUpdate(prevProps) {
-       if(prevProps.focused != this.props.focused && this.props.focused){
+       if(prevProps.focused !== this.props.focused && this.props.focused){
         this.ref.current.focus();
       }
     }
@@ -36,13 +37,13 @@ class Input extends React.PureComponent {
     }
   }
   
-  FocusableInput.defaultProps = {
-    focused: false
-  };
+//   FocusableInput.defaultProps = {
+//     focused: false
+//   };
   
 
-  const App = (props) => <FocusableInput focused={props.focused} />;
+//   const App = (props) => <FocusableInput focused={props.focused} />;
   
-  document.body.innerHTML = "<div id='root'></div>";
-  const root = createRoot(document.getElementById("root"));
-  root.render(<App />);
+//   document.body.innerHTML = "<div id='root2'></div>";
+//   const root = createRoot(document.getElementById("root2"));
+//   root.render(<App />);

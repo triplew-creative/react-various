@@ -1,7 +1,6 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-
-export const FocusableInput = (props) => {
+// import { createRoot } from 'react-dom/client';
+export const FocusableInputBasic = (props)  => {
     const inputRef = React.useRef();
     
     React.useEffect(()=> {
@@ -13,6 +12,6 @@ export const FocusableInput = (props) => {
     return <input ref={inputRef} />;
   };
 
-  document.body.innerHTML = "<div id='root'></div>";
-  const root = createRoot(document.getElementById("root"));
-  root.render(<FocusableInput shouldFocus={true} />,);
+  // document.body.innerHTML = "<div id='root1'></div>";
+  // const root = createRoot(document.getElementById("root1"));
+  // root.render(<FocusableInput shouldFocus={true} />,);

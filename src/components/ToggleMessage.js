@@ -1,5 +1,7 @@
 import React from 'react';
-export default class Message extends React.Component {
+// import { createRoot } from 'react-dom/client';
+import Button from '@mui/material/Button';
+export default class ToggleMessage extends React.Component {
     constructor(props){
       super(props);
       this.state = {
@@ -18,16 +20,16 @@ export default class Message extends React.Component {
     
     render() {
       return (<React.Fragment>
-            <a href="foo" onClick={this.toggle}>Want to buy a new car?</a>
-          {this.state.open && <p>Call +11 22 33 44 now!</p>}
+         <Button variant="contained"  onClick={this.toggle}> Want to buy a new car?</Button>
+          {this.state.open && <p>Call 1800 PAYTHERENT!</p>}
           </React.Fragment>);
     }
   }
   
-//   document.body.innerHTML = "<div id='root'> </div>";
+//   document.body.innerHTML = "<div id='root6'> </div>";
     
-//   const rootElement = document.getElementById("root");
-//   ReactDOM.render(<Message />, rootElement);
+//   const rootElement = createRoot(document.getElementById("root6"));
+//   rootElement.render(<Message />, rootElement);
   
 //   console.log("Before click: " + rootElement.innerHTML);
 //   document.querySelector("a").click();
